@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang= 'en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="This is a multiple choice quiz on mob movies">
+    <meta name="keywords" content="Thinkful,Quizz,App,mob,mafia,movies,film,trivia">
+    <meta name="author" content="Brian Albert">
+    <title>Mob Movie Quiz</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+
+
+  <body>
+    <div class="parent">
+      <!--The parent div will have three children:
+      the start-screen, the quiz-form, and the final-screen.
+      the quiz-form itself will have 11 children:
+      each of the ten questions, and an answer-screen that 
+      tells the user if their answer was correct or incorrect-->
+
+      <!-- this is the start page-->
+      <header role="banner"><h1>Mob Movie Quiz</h1></header>
+      <div class="start-screen">
+        <p role="article">This is a multiple choice quiz about mob movies.
+        There are ten multiple choice questions in the quiz.
+        The score-board will light up green if you get the answer right, red if you screw it up.
+        You need a score of at least 8/10 to live.
+        Press the 'reset' button at any time to start over. If you start over, your current score will not be saved!</p>
+        <p role="compelmentary">Capiche?</p>
+        <button type="button" class="start-button">Start the Quiz!</button>
+      </div>
+
+  <!-- this is the quiz page. these are just examples of the questions. they will only appear on the DOM in the final version.-->
+      
+      <form id="quiz-form">
+          <!-- this is an example of a multiple choice question-->
+        <p class="question" role="article"></p>
+        <input type="radio" class="multiple-choice" name="question0" value="A"> <label></label><br>
+        <input type="radio" class="multiple-choice" name="question0" value="B"> <label></label><br>
+        <input type="radio" class="multiple-choice"  name="question0" value="C"> <label></label><br>
+        <input type="radio" class="multiple-choice" name="question0" value="D"> <label></label><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Start Over</button>
+          <!-- this part will show the user's progress and current score-->
+        <div class="score-board">
+          <div class="answer-result question0"></div> 
+          <div class="answer-result question1"></div>
+          <div class="answer-result question2"></div>
+          <div class="answer-result question3"></div>
+          <div class="answer-result question4"></div>
+          <div class="answer-result question5"></div>
+          <div class="answer-result question6"></div>
+          <div class="answer-result question7"></div>
+          <div class="answer-result question8"></div>
+          <div class="answer-result question9"></div><br>
+          <p class="answer-feedback"></p>
+        </div>
+      </form>
+
+
+
+  <!-- this is the final screen that gives the user their total score. -->
+      <div id="final-screen">
+        <img>
+        <div class="result-message" role="article"></div>
+        <button type="reset">Start Over</button>
+      </div> 
+    </div>
+
+    
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
